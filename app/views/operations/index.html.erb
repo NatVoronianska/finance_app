@@ -6,7 +6,7 @@
   <% @operations.each do |operation| %>
     <%= render operation %>
     <p>
-      <%= link_to "Show this operation", category_operations_path(@category) %>
+      <%= link_to "Show this operation", category_operation_path(@category, operation)%>
     </p>
   <% end %>
 </div>

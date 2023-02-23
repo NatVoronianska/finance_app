@@ -3,7 +3,7 @@
 <%= render @operation %>
 
 <div>
-  <%= link_to "Edit this operation", edit_category_operation_path(@category, @category) %> |
+  <%= link_to "Edit this operation", edit_category_operation_path(@category, @operation) %> |
   <%= link_to "Back to operations", category_operations_path %>
 
   <%= button_to "Destroy this operation", [@category, @operation], method: :delete %>
