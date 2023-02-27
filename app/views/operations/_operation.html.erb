@@ -1,22 +1,23 @@
 <div id="<%= dom_id operation %>">
-  <p>
-    <strong>Amount:</strong>
-    <%= operation.amount %>
-  </p>
-
-  <p>
-    <strong>Date:</strong>
-    <%= operation.date %>
-  </p>
-
-  <p>
-    <strong>Description:</strong>
-    <%= operation.description %>
-  </p>
-
-  <p>
-    <strong>Category:</strong>
-    <%= operation.category_id %><br><%= operation.category.name%>
-  </p>
+  <table class="table table-bordered table-striped">
+  <tbody>
+    <tr>
+      <td><strong>Amount:</strong></td>
+      <td><%= operation.amount %></td>
+    </tr>
+    <tr>
+      <td><strong>Date:</strong></td>
+      <td><%= operation.date %></td>
+    </tr>
+    <tr>
+      <td><strong>Description:</strong></td>
+      <td><%= operation.description %></td>
+    </tr>
+    <tr>
+      <td><strong>Category:</strong></td>
+      <td><%= operation.category_id %><br><%= operation.category.name%></td>
+    </tr>
+  </tbody>
+</table>
 
 </div>
