@@ -5,7 +5,5 @@
 <%= render @category %>
 
 <div class="flex-row ">
-  <%= link_to "Edit this category", edit_category_path(@category), class: "btn btn-primary" %>
   <%= link_to "Back to categories", categories_path, class: "btn btn-success" %>
-  <%= link_to "Delete this category", @category, method: :delete, class: "btn btn-warning" %>
 </div>
