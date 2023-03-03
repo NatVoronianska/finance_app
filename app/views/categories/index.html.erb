@@ -3,6 +3,14 @@
 <h1>Categories</h1>
 
   <div class="container text-center">
+    <div class="text-start form-floating mb-3"> 
+    <%= form_with url: categories_path, method: :get do |form| %>
+      <%= form.label :name, "Пошук категорії:" %>
+      <%= form.text_field :name %>
+      <%= form.submit "Search" %>
+      <% end %>
+      
+    </div>
     <div class="row border border-secondary border-bottom-0 bg-secondary bg-gradient py-3 rounded-top">
       <div class="col-md-2">ID</div>
       <div class="col-md-3">НАЗВА</div>
