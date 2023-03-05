@@ -3,28 +3,13 @@
 <h1>Transactions</h1>
 <hr>
 <div id="operations">
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>Amount</th>
-        <th>Date</th>
-        <th>Description</th>
-        <th>Category</th>
-        <th>Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% category.operations.each do |operation| %>
-        <tr>
-          <td><%= operation.amount %></td>
-          <td><%= operation.date %></td>
-          <td><%= operation.description %></td>
-          <td><%= operation.category.name %></td>
-          <td>
-           
-        </tr>
+      <% @operations.each do |operation| %>
+      <%= render operation %>
+      <p>
+        <%= link_to "Show this operation", category_operation_path(@category, operation) %>
+      </p>    
+      
       <% end %>
-    </tbody>
-  </table>
 </div>
+
 <%= link_to "Create new operation", new_category_operation_path(@category), class: "btn btn-outline-secondary" %>
