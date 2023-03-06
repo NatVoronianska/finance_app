@@ -1,25 +1,14 @@
 <div id="<%= dom_id operation %>">
-  <!--<h3>Transaction id: <%= (params[:id]) %></h3>!-->
-  <p>
-    <strong>Amount:</strong>
-    <%= operation.amount %>
-  </p>
-  <p>
-    <strong>Date:</strong>
-    <%= operation.date %>
-    </p>
-    <p>
-      <strong>Description:</strong>
-      <%= operation.description %>
-    </p>
-    <p>
-      <strong>Category id:</strong>
-      <%= operation.category.id %>
-    </p>
-    <p>
-      <strong>Category name:</strong>
-      <%= operation.category.name%>
-    </p>
-    
-            <%= link_to "Show", category_operation_path(@category, operation), class: "btn btn-sm btn-info mr-2" %>
+
+<div class="row border align-items-center text-center border-secondary rounded">
+      <div class="col-md-1"><%= operation.id %></div>
+      <div class="col-md-2"><%= operation.amount %></div>
+      <div class="col-md-2"><%= operation.date %></div>
+      <div class="col-md-2"><%= operation.description %></div>
+      <div class="col-md-2"><%= operation.category.id%></div>
+      <div class="col-md-3 d-flex">
+        <%= link_to "Edit", edit_category_operation_path(operation.category.id.to_s, operation), class: "btn btn-sm btn-primary mr-2" %>
+        <%= button_to "Delete", [@category, operation], method: :delete, class: "btn btn-sm btn-warning" %> 
+        
+      </div>
 </div>

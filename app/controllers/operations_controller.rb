@@ -13,12 +13,14 @@ class OperationsController < ApplicationController
 
   # GET /operations/new
   def new
-    @operation = @category.operations.build
+   
     @categories = Category.all.map {|category| [category.name, category.id]}
+    @operation = @category.operations.build
   end
 
   # GET /operations/1/edit
   def edit
+    @categories = Category.all.map {|category| [category.name, category.id]}
   end
 
   # POST /operations or /operations.json
@@ -62,6 +64,7 @@ class OperationsController < ApplicationController
   private
     def get_category
       @category = Category.find(params[:category_id])
+      
     end
     
     # Use callbacks to share common setup or constraints between actions.
